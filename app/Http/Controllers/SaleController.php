@@ -7,23 +7,26 @@ use Illuminate\Support\Facades\DB;
 
 class SaleController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         $transactions = DB::table('sales')
-        ->join('products', 'sales.product_id', '=', 'products.id')
-        ->select('sales.*', 'products.name as product_name')
-        ->get();
+            ->join('products', 'sales.product_id', '=', 'products.id')
+            ->select('sales.*', 'products.name as product_name')
+            ->get();
         return view('storekeeper.sales.index', ['transactions' => $transactions]);
- 
+
     }
 
-    public function create() {
+    public function create()
+    {
         $products = DB::table('products')->get();
         return view('storekeeper.sales.create', ['products' => $products]);
     }
 
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
 
-        $data =  $request->validate([
+        $data = $request->validate([
             'product_id' => 'required',
             'unit_price' => 'required',
             'sale_qty' => 'required',
@@ -44,4 +47,8 @@ class SaleController extends Controller
 
         return redirect()->route('sales.index')->with('success', 'Transaction created successfully.');
     }
+
+
 }
+
+

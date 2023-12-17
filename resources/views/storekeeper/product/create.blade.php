@@ -6,7 +6,7 @@
             {{ __('Create Product') }}
         </h2>
     </x-slot>
-
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mt-5">
 
 <form class="max-w-sm mx-auto" action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
   @csrf
@@ -38,4 +38,5 @@
   
     <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Create Product</button>
   </form>
+    </div>
 </x-app-layout>

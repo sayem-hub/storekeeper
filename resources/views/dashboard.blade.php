@@ -28,13 +28,13 @@
                                             <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                                         </svg>
                                     </div>
-                                    <h2 class="text-white dark:text-white text-lg font-medium">Feature 1</h2>
+                                    <h2 class="text-white dark:text-white text-lg font-medium">Today's Sale</h2>
                                 </div>
                                 <div class="flex flex-col justify-between flex-grow">
                                     <p class="leading-relaxed text-base text-white dark:text-gray-300">
-                                        Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.
+                                      {{ $todaySale }}
                                     </p>
-                                    <a href="#" class="mt-3 text-black dark:text-white hover:text-blue-600 inline-flex items-center">Learn More
+                                    <a href="{{ route('sales.index') }}" class="mt-3 text-black dark:text-white hover:text-blue-600 inline-flex items-center">See Transactions
                                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                             stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                                             <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -55,13 +55,13 @@
                                             <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                                         </svg>
                                     </div>
-                                    <h2 class="text-white dark:text-white text-lg font-medium">Feature 2</h2>
+                                    <h2 class="text-white dark:text-white text-lg font-medium">Yesterday's Sale</h2>
                                 </div>
                                 <div class="flex flex-col justify-between flex-grow">
                                     <p class="leading-relaxed text-base text-white dark:text-gray-300">
-                                        Lorem ipsum dolor sit amet. In quos laboriosam non neque eveniet 33 nihil molestias. Rem perspiciatis iure ut laborum inventore et maxime amet.
+                                        {{ $yesterdaySale }}
                                     </p>
-                                    <a href="#" class="mt-3 text-black dark:text-white hover:text-blue-600 inline-flex items-center">Learn More
+                                    <a href="{{ route('sales.index') }}" class="mt-3 text-black dark:text-white hover:text-blue-600 inline-flex items-center">See Transactions
                                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                             stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                                             <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -82,13 +82,13 @@
                                             <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                                         </svg>
                                     </div>
-                                    <h2 class="text-white dark:text-white text-lg font-medium">Feature 3</h2>
+                                    <h2 class="text-white dark:text-white text-lg font-medium">This Month's Sale</h2>
                                 </div>
                                 <div class="flex flex-col justify-between flex-grow">
                                     <p class="leading-relaxed text-base text-white dark:text-gray-300">
-                                        Lorem ipsum dolor sit amet. In quos laboriosam non neque eveniet 33 nihil molestias. Rem perspiciatis iure ut laborum inventore et maxime amet.
+                                       {{$thisMonthSale}}
                                     </p>
-                                    <a href="#" class="mt-3 text-black dark:text-white hover:text-blue-600 inline-flex items-center">Learn More
+                                    <a href="{{ route('sales.index') }}" class="mt-3 text-black dark:text-white hover:text-blue-600 inline-flex items-center">See Transactions
                                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                             stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                                             <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -111,13 +111,13 @@
                                             <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                                         </svg>
                                     </div>
-                                    <h2 class="text-white dark:text-white text-lg font-medium">Feature 3</h2>
+                                    <h2 class="text-white dark:text-white text-lg font-medium">Last Month's Sale</h2>
                                 </div>
                                 <div class="flex flex-col justify-between flex-grow">
                                     <p class="leading-relaxed text-base text-white dark:text-gray-300">
-                                        Lorem ipsum dolor sit amet. In quos laboriosam non neque eveniet 33 nihil molestias. Rem perspiciatis iure ut laborum inventore et maxime amet.
+                                        {{ $lastMonthSale }}
                                     </p>
-                                    <a href="#" class="mt-3 text-black dark:text-white hover:text-blue-600 inline-flex items-center">Learn More
+                                    <a href="{{ route('sales.index') }}" class="mt-3 text-black dark:text-white hover:text-blue-600 inline-flex items-center">See Transactions
                                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                             stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                                             <path d="M5 12h14M12 5l7 7-7 7"></path>

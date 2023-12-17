@@ -14,22 +14,21 @@
 
 
 
-<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-    <button type="button" class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"> <a href="{{ route('sales.create') }}">Add Transactions</a></button>
-    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-            <tr>
-                <th class="px-6 py-3 text-center">SL</th>
-                <th class="px-6 py-3">Date & Time </th>
-                <th class="px-6 py-3">Product name </th>
-                <th class="px-6 py-3">Unit Price</th>
-                <th class="px-6 py-3">Quantity</th>
-                <th class="px-6 py-3">Total Price</th>
-                <th class="px-6 py-3">Action</th>
-            </tr>
-        </thead>
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mt-5">
+         <button type="button" class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"> <a href="{{ route('sales.create') }}">Add Transactions</a></button>
+        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                    <th class="px-6 py-3 text-center">SL</th>
+                    <th class="px-6 py-3">Date & Time </th>
+                    <th class="px-6 py-3">Product name </th>
+                    <th class="px-6 py-3">Unit Price</th>
+                    <th class="px-6 py-3">Quantity</th>
+                    <th class="px-6 py-3">Total Price</th>
+                </tr>
+            </thead>
 
-        <tbody>
+         <tbody>
             @if ($transactions->count() == 0)
                 <tr>
                     <td colspan="7" class="px-6 py-4 text-center">No Transactions Found</td>
@@ -49,10 +48,7 @@
                 <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">{{ $transaction->unit_price }}</td>
                 <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">{{ $transaction->total_price }}</td>
                 
-                <td class="px-6 py-4">
-                    <a href="{{ route('sales.edit', $transaction->id) }}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                </td>
-                
+                               
             </tr>
             @endforeach
         </tbody>

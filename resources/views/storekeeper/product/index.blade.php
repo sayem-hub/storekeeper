@@ -6,6 +6,8 @@
 </x-slot>
 
 
+<div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mt-5">
+
                 @if (session()->has('success'))
                     <div class="text-green-500 font-bold text-center py-2 px-4 rounded bg-green-100 mb-4">
                         {{ session()->get('success') }}
@@ -14,7 +16,7 @@
 
 
 
-<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+
     <button type="button" class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"> <a href="{{ route('products.create') }}">Add Product</a></button>
     <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -58,6 +60,7 @@
             @endforeach
         </tbody>
     </table>
+</div>
 </div>
 
 </x-app-layout>
